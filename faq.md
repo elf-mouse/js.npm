@@ -13,3 +13,17 @@ npm cache clean --force
 # OR
 npm cache verify
 ```
+
+---
+
+Q: `self signed certificate`
+
+A: On Node Package Manager you have two options: bypass or set a certificate file.
+
+```sh
+# Bypassing (risky!)
+npm config set strict-ssl false --global
+
+# Setting a certificate file
+npm config set cafile /path/to/your/cert.pem
+```
